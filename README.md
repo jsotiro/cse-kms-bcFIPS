@@ -19,16 +19,16 @@ The sample uses AWS SDK 2.x to create a KMS client which handles the data key op
 
 ``export AWS_KMS_CMK_ARN=arn:aws:kms:eu-west-1:123456789ab:key/1a234b4c-d678-9e01-fg23-4hk456789l0``
 <br>
-#### Run the FipsCseClient 
-The sample is a command line java app that takes one argument the text to encrypt and then decrypt. You can test it using java or mvn e.g.
+### Run the Sample 
+The sample is a command line java app - *FipsCseClient* - that takes one argument the text to encrypt and then decrypt. You can test it using java or mvn e.g.
 
 ``mvn compile exec:java -Dexec.mainClass="xyz.leansecurity.crypto.bcfips.FipsCseClient"   -Dexec.args="EncryptMeNow!"``
 
-#### About the code
+### About the code
 - The FipsCse class which in turn performs  encryption / deryption using and a DataKey interface to delegate data key management. It also does all the conversation of keys from byte arrays to java.crypto SecretKey which is what BounceCastle FIPS expects. 
 - The FipsCse instantiates FipsCse and set the DataKey interface to its KMS implemention KmsDataKey. This class uses a kms client to handle data key generation, encryption, and decryption. The encrypted key is returned in Base64 encoded format so that it can be saved in readable metadata attributes if needed but the byte array format is easily obtained using java's Base64 decoder
 - slf4j is used for logging because that's what bouncy castle uses.
 - the sample uses the BasicProfileCredentialsProvider to get the default profile credentials. This assumes you have the AWS CLI 2.v installed. However, the KmsDataClient takes an AwsCredentials instance and you can change it to a credential object of your choice in the FipsCseClient
-#### Known Issues
+### Known Issues
 The sample has been tested on Ubuntu 20.x / MacOS and Java 14. Although it works fine, when running it using mvn it gets stuck waiting for the threat to be destroyed. This does not happen when running it in the IDE  
 
