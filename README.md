@@ -21,9 +21,7 @@ The sample uses AWS SDK 2.x to create a KMS client which handles the data key op
 1. Region - The region of KMS Service - eg <br>
 ``export AWS_REGION=eu-west-1`` <br>
 2. KMS Key ARN Id - the ARN Id for the CML to use as Master Key - eg  <br>
-
-``export AWS_KMS_CMK_ARN=arn:aws:kms:eu-west-1:123456789ab:key/1a234b4c-d678-9e01-fg23-4hk456789l0``
-<br>
+``export AWS_KMS_CMK_ARN=arn:aws:kms:eu-west-1:123456789ab:key/1a234b4c-d678-9e01-fg23-4hk456789l0``<br>
 ### Run the Sample 
 The sample is a command line java app - *FipsCseClient* - that takes one argument the text to encrypt and then decrypt. You can test it using java or mvn e.g.
 
