@@ -1,6 +1,6 @@
 # Using BouncyCastle FIPS for Envelop Client Side Encryption (CSE) with a KMS-provided data key
 This is a sample showing how to use the FIPS edition of BouncyCastle crypto library in combination with a data key generated and encrypted/decrypted using a KMS CMK. 
-It uses 256-bit AES data Keys with the Galois/Counter Mode (GCM) authenticated mode of encryption but can be adapted to other encryption methods. If you wish to do so a great resource with examples for all other modes is *[The Bouncy Castle FIPS Java API in100 Examples](https://www.bouncycastle.org/fips-java/BCFipsIn100.pdf)* PDF document. The document provides an in depth coverage of BouncyCastle FIPS JAVA API but it does not cover KMS, which this sample adds. 
+It uses 256-bit AES data Keys with the Galois/Counter Mode (GCM) authenticated mode of encryption but can be adapted to other encryption methods. If you wish to do so a great resource with examples for all other modes is *[The Bouncy Castle FIPS Java API in100 Examples](https://www.bouncycastle.org/fips-java/BCFipsIn100.pdf)* PDF document. The document provides an in depth coverage of BouncyCastle FIPS JAVA API but it does not cover using with KMS, which this sample adds. 
 ## Setup 
 
 #### Install AWS CLI v2 
